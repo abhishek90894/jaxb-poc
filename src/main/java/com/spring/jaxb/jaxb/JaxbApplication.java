@@ -5,8 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.StringReader;
+import java.io.StringWriter;
 
 @SpringBootApplication
 public class JaxbApplication {
@@ -31,6 +33,25 @@ public class JaxbApplication {
 		Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 		employee pojo  =  (employee) unmarshaller.unmarshal(new StringReader(xml));
 		System.out.println(pojo);
+
+		/**
+		 * converting pojo to xml
+		 */
+		// create marshaller object
+
+		Marshaller marshaller = jaxbContext.createMarshaller();
+		//create the content tree by using set methods
+		 pojo.setAge(28);
+		 pojo.setName("ankur");
+
+		 //call the marshall method
+		StringWriter sw = new StringWriter();
+		marshaller.marshal(pojo,sw);
+		System.out.println(sw.toString());
+
+
+
+		 //
 
 	}
 
