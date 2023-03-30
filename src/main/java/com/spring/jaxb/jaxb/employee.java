@@ -11,6 +11,7 @@ public class employee {
     private Integer age;
 
     private Integer id;
+    private  company company;
 
     @XmlElement
     public String getName() {
@@ -21,8 +22,16 @@ public class employee {
     public Integer getAge() {
         return age;
     }
+    @XmlElement
+    public company getCompany() {
+        return company;
+    }
 
-    @XmlAttribute
+    public void setCompany(company company) {
+        this.company = company;
+    }
+
+    @XmlAttribute            // xml employee id   for this we use this annotation
     public Integer getId() {
         return id;
     }

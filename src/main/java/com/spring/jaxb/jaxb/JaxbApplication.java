@@ -21,6 +21,7 @@ public class JaxbApplication {
 		String xml ="<employee id =\"1234\">"+
 				"<name>abhishek</name>"+
 				"<age>25</age>"+
+				"<company id = \"company_id\">company name</company>"+
 				 "</employee>";
 
 		// create the pojo class employee
@@ -33,6 +34,7 @@ public class JaxbApplication {
 		Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 		employee pojo  =  (employee) unmarshaller.unmarshal(new StringReader(xml));
 		System.out.println(pojo);
+		System.out.println(pojo.getCompany().getName());
 
 		/**
 		 * converting pojo to xml
