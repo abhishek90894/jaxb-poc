@@ -30,8 +30,8 @@ public class JaxbApplication {
 
 		Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 		employee pojo  =  (employee) unmarshaller.unmarshal(new StringReader(xml));
-		System.out.println(pojo.getAge());
-		System.out.println(pojo.getName());
+		System.out.println(pojo);
+
 	}
 
 }
