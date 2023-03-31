@@ -21,7 +21,7 @@ public class JaxbApplication {
 		String xml ="<employee id =\"1234\">"+
 				"<name>abhishek</name>"+
 				"<age>25</age>"+
-				"<company id = \"company_id\">company name</company>"+
+				"<company>company name</company>"+
 				 "</employee>";
 
 		// create the pojo class employee
