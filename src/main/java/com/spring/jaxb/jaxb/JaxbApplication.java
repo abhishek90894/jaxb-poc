@@ -30,6 +30,9 @@ public class JaxbApplication {
 		JAXBContext jaxbContext = JAXBContext.newInstance(employee.class);
 
 		// create unmarshller object
+		/**
+		 * converting xml to pojo class
+		 */
 
 		Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 		employee pojo  =  (employee) unmarshaller.unmarshal(new StringReader(xml));
@@ -45,6 +48,9 @@ public class JaxbApplication {
 		//create the content tree by using set methods
 		 pojo.setAge(28);
 		 pojo.setName("ankur");
+		 company company = new company();
+		 company.setName("neosoft technology");
+		 pojo.setCompany(company);
 
 		 //call the marshall method
 		StringWriter sw = new StringWriter();

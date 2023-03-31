@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee>
+    <address>kanpur uttar pradesh</address>
+    <id>101</id>
+    <name>abhishek srivastava</name>
+    <salary>50000</salary>
+</employee>
