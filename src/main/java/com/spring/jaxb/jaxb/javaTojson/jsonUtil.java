@@ -17,4 +17,11 @@ public static String convertJavaToJson(Object object) throws Exception
   return jsonResponse;
 
 }
+
+public static <T> T convertJsonToJava(String jsonString ,Class<T> cls) throws Exception
+{
+     T result = null;
+     result = mapper.readValue(jsonString,cls);
+     return result;
+}
 }

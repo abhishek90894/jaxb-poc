@@ -10,5 +10,10 @@ public class main {
         emp.setSalary(60000D);
         String jasonEmployee  = jsonUtil.convertJavaToJson(emp);
         System.out.println(jasonEmployee);
+
+        Employee emp1  = jsonUtil.convertJsonToJava(jasonEmployee,Employee.class);
+        System.out.println(emp1);
+
+
     }
 }
