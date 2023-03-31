@@ -14,6 +14,9 @@ public class main {
         Employee emp1  = jsonUtil.convertJsonToJava(jasonEmployee,Employee.class);
         System.out.println(emp1);
 
+                 String jsonEmployee1 = jsonUtil.convertJavaToJson(emp1);
+        System.out.println(jsonEmployee1);
+
 
     }
 }

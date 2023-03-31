@@ -1,9 +1,21 @@
 package com.spring.jaxb.jaxb.javaTojson;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonPropertyOrder;
+
+/**
+ * @JsonPropertyOrder is use to set the class member on our define order
+ */
+@JsonPropertyOrder(value ={
+        "empName",
+        "salary"
+        ,"empId"
+})
 public class Employee {
 
     private int empId;
     private String empName;
+    @JsonIgnore          // @JsonIgnore is used to ignore the particular field of the class
     private Double salary;
 
     public int getEmpId() {
