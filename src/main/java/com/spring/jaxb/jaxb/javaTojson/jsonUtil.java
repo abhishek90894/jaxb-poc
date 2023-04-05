@@ -1,6 +1,10 @@
 package com.spring.jaxb.jaxb.javaTojson;
 
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
+
+import java.io.File;
+import java.util.Map;
 
 public class jsonUtil
 {
@@ -24,4 +28,15 @@ public static <T> T convertJsonToJava(String jsonString ,Class<T> cls) throws Ex
      result = mapper.readValue(jsonString,cls);
      return result;
 }
+
+
+
+
+
+
+
+
+
+
+
 }

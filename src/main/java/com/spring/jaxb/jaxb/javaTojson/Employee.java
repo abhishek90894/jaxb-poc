@@ -15,7 +15,7 @@ public class Employee {
 
     private int empId;
     private String empName;
-    @JsonIgnore          // @JsonIgnore is used to ignore the particular field of the class
+                            // @JsonIgnore          // @JsonIgnore is used to ignore the particular field of the class
     private Double salary;
 
     public int getEmpId() {
