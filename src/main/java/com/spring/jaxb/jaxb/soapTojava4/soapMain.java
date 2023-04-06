@@ -20,7 +20,7 @@ public class soapMain {
     public static void main(String[] args) throws Exception {
 //        try {
 //
-//            File file = new File("soap.xml");
+//            File file = new File("soap1.xml");
 //            JAXBContext jaxbContext = JAXBContext.newInstance(SendToWallet.class);
 //            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 //
@@ -30,16 +30,18 @@ public class soapMain {
 //        } catch (
 //                JAXBException e) {
 //            e.printStackTrace();
-////        }
-////
-////    }
+//
+//        }
+//    }
+//}
 
         try {
             XMLInputFactory xif = XMLInputFactory.newFactory();
-            XMLStreamReader xsr = xif.createXMLStreamReader(new FileReader("soap.xml"));
-            xsr.nextTag(); // Advance to Envelope tag
+            XMLStreamReader xsr = xif.createXMLStreamReader(new FileReader("soap1.xml"));
+           xsr.nextTag(); // Advance to Envelope tag
 
-            xsr.nextTag(); // Advance to Body tag
+             // Advance to Body tag
+            xsr.nextTag();
             xsr.nextTag();
             xsr.nextTag();
             xsr.nextTag();
@@ -49,9 +51,11 @@ public class soapMain {
 
 
 
-            JAXBContext jc = JAXBContext.newInstance(SendToWallet.class);
+
+
+            JAXBContext jc = JAXBContext.newInstance(SendToWalletRequest.class);
             Unmarshaller unmarshaller = jc.createUnmarshaller();
-            JAXBElement<SendToWallet> je = unmarshaller.unmarshal(xsr, SendToWallet.class);
+            JAXBElement<SendToWalletRequest> je = unmarshaller.unmarshal(xsr, SendToWalletRequest.class);
 
             System.out.println(je.getName());
             System.out.println(je.getValue());
