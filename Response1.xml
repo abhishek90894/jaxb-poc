@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <KD4SoapHeaderV2 xmlns="http://www.ibm.com/KD4Soap">A03ODA1YzhlZDQ2MWQAAQ==</KD4SoapHeaderV2>
+    </soap:Header>
+    <soap:Body>
+        <Response xmlns="http://tempuri.org/">
+            <Result xmlns:a="http://schemas.datacontract.org/2004/07/PS.SharedWebServices.Response" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <a:Errors />
+                <a:Count>329</a:Count>
+                <a:Return>SUCCESS</a:Return>
+                <a:DashboardDTOs>
+                    <a:DashboardDTOs>
+                        <a:Value>28.58</a:Value>
+                        <a:Code>O001</a:Code>
+                        <a:Name>Test2</a:Name>
+                    </a:DashboardDTOs>
+                    <a:DashboardDTOs>
+                        <a:Value>40.22</a:Value>
+                        <a:Code>O002</a:Code>
+                        <a:Name>Test2</a:Name>
+                    </a:DashboardDTOs>
+                    <a:DashboardDTOs>
+                        <a:Value>54.11</a:Value>
+                        <a:Code>O003</a:Code>
+                        <a:Name>Test3</a:Name>
+                    </a:DashboardDTOs>
+                </a:DashboardDTOs>
+            </Result>
+        </Response>
+    </soap:Body>
+</soap:Envelope>
