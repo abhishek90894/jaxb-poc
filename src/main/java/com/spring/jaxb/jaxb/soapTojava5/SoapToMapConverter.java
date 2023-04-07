@@ -65,7 +65,7 @@ public class SoapToMapConverter {
     }
 
     public static void main(String[] args) throws Exception {
-        String s="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+        String soapMessage="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                 "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\">\n" +
                 "    <soapenv:Header />\n" +
                 "    <soapenv:Body>\n" +
@@ -87,8 +87,8 @@ public class SoapToMapConverter {
                 "    </soapenv:Body>\n" +
                 "</soapenv:Envelope>";
 
-      Map<String,Object> map = convertSoapToMap(s);
-        log.info(" input string {}",s);
+      Map<String,Object> map = convertSoapToMap(soapMessage);
+        log.info(" input string {}",soapMessage);
 
         log.info("output in map {}"+map);
     }
